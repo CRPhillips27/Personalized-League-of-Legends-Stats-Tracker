@@ -17,7 +17,6 @@ def get_match_ids(puuid, mass_region, no_games, queue_id, api):
         "&api_key=" +
         api
     )
-    print(api_url)
     resp = requests.get(api_url)
     match_ids = resp.json()
     # the following code filters out matches less than 10 minutes as requested by test user; 
@@ -194,7 +193,6 @@ def calculate_top_lane_win_rates(puuid, match_ids, mass_region, api):
         player_data = find_player_data(match_data, puuid)
         champion_name = player_data['championName']
         if player_data['individualPosition'].upper() == 'TOP':
-            print(player_data)
             win_status = player_data['win']
             enemy_champion_name = find_enemy_laner(match_data, 'TOP') 
             if champion_name not in champion_pairs:
