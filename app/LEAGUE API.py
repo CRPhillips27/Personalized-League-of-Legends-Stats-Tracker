@@ -203,15 +203,17 @@ def calculate_top_lane_win_rates(puuid, match_ids, mass_region, api):
             champion_pairs[champion_name][enemy_champion_name]['total'] += 1
             if win_status:
                 champion_pairs[champion_name][enemy_champion_name]['wins'] += 1
+    
+    # Constructing win rate data
+    result = {}
     for champion, enemy_data in champion_pairs.items():
+        result[champion] = {}
         for enemy_champion, win_data in enemy_data.items():
             total_games = win_data['total']
             if total_games > 0:
                 win_rate = (win_data['wins'] / total_games) * 100
-            else:
-                win_rate = 0
-            champion_pairs[champion][enemy_champion] = win_rate
-    return champion_pairs
+                result[champion][enemy_champion] = win_rate
+    return result
 def calculate_win_rates_against_all_champions(puuid, match_ids, mass_region, api):
     champion_win_rates = {}
 
@@ -229,15 +231,18 @@ def calculate_win_rates_against_all_champions(puuid, match_ids, mass_region, api
                 champion_win_rates[enemy_champion]['total'] += 1
                 if win_status:
                     champion_win_rates[enemy_champion]['wins'] += 1
+                    
+    # Calculating win rates and rounding to two decimal places
     for enemy_champion, win_data in champion_win_rates.items():
         total_games = win_data['total']
         if total_games > 0:
-            win_rate = (win_data['wins'] / total_games) * 100
+            win_rate = round((win_data['wins'] / total_games) * 100, 2)
         else:
             win_rate = 0
         champion_win_rates[enemy_champion] = win_rate
 
     return champion_win_rates
+
 def get_top_lane_stats(puuid, mass_region, api, match_ids):
     top_lane_stats = {}
     for match_id in match_ids:
