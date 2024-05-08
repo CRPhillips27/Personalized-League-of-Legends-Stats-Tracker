@@ -1,0 +1,42 @@
+{% include 'top.html' %}
+<section id="WinRates">
+    <h2><a href = "/">Home</a></h2>
+    <h1>Win Rates Against Top Laners as a Top Laner</h1>
+<table>
+    <thead>
+      <tr>
+        <th>Champion</th>
+        <th>Enemy Champion</th>
+        <th>Win Rate as Top Laner</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for champion, win_rates in top_lane_win_rates.items() %}
+        {% for enemy_champion, win_rate in win_rates.items() %}
+          <tr>
+            <td><img src="{{ champion_image_urls[champion] }}" alt="{{ champion }}">{{ champion }}</td>
+            <td><img src="{{ champion_image_urls[enemy_champion] }}" alt="{{ champion }}">{{ enemy_champion }}</td>
+            <td>{{ win_rate }}</td>
+          </tr>
+        {% endfor %}
+      {% endfor %}
+    </tbody>
+  </table>
+  <h1>Win Rates Against All Enemy Champions</h1>
+  <table border="1">
+      <thead>
+          <tr>
+              <th>Enemy Champion</th>
+              <th>Win Rate</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for enemy_champion, win_rate in win_rates_against_all_champions.items() %}
+          <tr>
+              <td><img src="{{ champion_image_urls[enemy_champion] }}" alt="{{ champion }}">{{ enemy_champion }}</td>
+              <td>{{ win_rate }}</td>
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+</section>

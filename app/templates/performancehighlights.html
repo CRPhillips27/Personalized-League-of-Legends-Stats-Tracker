@@ -1,0 +1,20 @@
+{% include 'top.html' %}
+<section id="performance">
+    <h2><a href = "/">Home</a></h2>
+    <div class="highlight-card">
+        <h3>Your Best Performance</h3>
+        <p><strong>Best KDA:</strong> {{ bestchamp }} with a KDA of {{ bestkda }} over {{ bestcount }} game(s)</p>
+    </div>
+    <div class="highlight-card">
+        <h3>Your Worst Performance</h3>
+        <p><strong>Worst KDA:</strong> {{ worstchamp }} with a KDA of {{ worstkda }} over {{ worstcount }} game(s)</p>
+    </div>
+    <div class="highlight-card">
+        <h3>Your Most Played Champion</h3>
+        <p><strong>Most Played Champion:</strong> {{ mostplayedchamp }} with {{ mostplayedcount }} game(s) and an average win rate of {{ mostplayedwinrate }}%</p>
+    </div>
+    <div class="highlight-card">
+        <h3>Your Highest Kill Game</h3>
+        <p><strong>Highest Kill Game:</strong> {{ highestkillchamp }} with {{ highestkillkills }} kills</p>
+    </div>
+</section>

@@ -1,0 +1,25 @@
+{% include 'top.html' %}
+<section id="itemWinRates">
+    <h2><a href = "/">Home</a></h2>
+    <h2>Item Win Rates</h2>
+    <table id="itemWinRatesTable">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Total Bought</th>
+                <th>Wins</th>
+                <th>Win Rate (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item, rates in item_win_rates_dict_with_names.items() %}
+            <tr>
+                <td><img src="{{ item_image_urls[item] }}" alt="{{ item }}">{{ item }}</td>
+                <td>{{ rates.total }}</td>
+                <td>{{ rates.wins }}</td>
+                <td>{{ rates.win_rate }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>

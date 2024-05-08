@@ -1,0 +1,23 @@
+{% include 'top.html' %}
+<section>
+<h2><a href = "/">Home</a></h2>
+<h2>Top Lane Champion Statistics</h2>
+<table>
+    <tr>
+        <th>Champion</th>
+        <th>Games Played</th>
+        <th>Avg Gold Earned</th>
+        <th>Avg Damage Dealt</th>
+        <th>Avg Damage Taken</th>
+    </tr>
+    {% for champion, stats in top_lane_stats.items() %}
+    <tr>
+        <td><img src="{{ champion_image_urls[champion] }}" alt="{{ champion }}">{{ champion }}</td>
+        <td>{{ stats.count }}</td>
+        <td>{{ stats.gold_earned }}</td>
+        <td>{{ stats.damage_dealt }}</td>
+        <td>{{ stats.damage_taken }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</section>

@@ -1,0 +1,25 @@
+{% include 'top.html' %}
+<section id="csStats">
+    <h2><a href = "/">Home</a></h2>
+    <h2>Top Lane Average CS Stats</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Champion</th>
+                <th>CS @ 10 min</th>
+                <th>CS @ 20 min</th>
+                <th>CS @ 30 min</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for champion, cs_scores in cs_data.items() %}
+            <tr>
+                <td><img src="{{ champion_image_urls[champion] }}" alt="{{ champion }}">{{ champion }}</td>
+                <td>{{ cs_scores[0]|default('N/A', true) }}</td>
+                <td>{{ cs_scores[1]|default('N/A', true) }}</td>
+                <td>{{ cs_scores[2]|default('N/A', true) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
