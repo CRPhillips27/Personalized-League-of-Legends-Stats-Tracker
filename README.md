@@ -7,8 +7,7 @@ This project is an ongoing development of an application that utilizes Riot API 
 ## ✨ Features
 
 - Utilizes real-time account information from Riot API 
-- Feature 2
-- Feature 3
+- Displays information in simple tables that are easily understood
 
 ## 🛠️ Technologies Used
 
@@ -24,30 +23,17 @@ This project is an ongoing development of an application that utilizes Riot API 
 
 ## 📖 Usage
 
-Explain how to use your project once it's installed. Provide examples or code snippets if necessary. This section should help users understand how to interact with your project.
+Simply click on each of the buttons to redirect to pages with different information corresponding to League of Legends account information of Aaron Machica. 
 
 ## 🌐 Demo
 
-[Link to Demo](http://example.com)
+[Link to Demo Vids] https://drive.google.com/drive/folders/1UzpvXxLZqnK5wPak8Yk6i-zKTzbTlgp9?usp=sharing
 
 ## 🖼️ Screenshots
 
 ![Screenshot 1](screenshot1.png)
 ![Screenshot 2](screenshot2.png)
 
-## 🤝 Contributing
-
-Guidelines for contributing to the project. This could include instructions for submitting bug reports, feature requests, or code contributions.
-
-## 📄 License
-
-This project is licensed under the [License Name] License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## 📧 Contact
-
-- [Email Address](mailto:youremail@example.com)
-- [Twitter](https://twitter.com/yourtwitter)
-- [LinkedIn](https://www.linkedin.com/in/yourlinkedin)
 
 ## 🙏 Acknowledgements
 
