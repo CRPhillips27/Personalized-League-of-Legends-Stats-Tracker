@@ -31,10 +31,12 @@ Simply click on each of the buttons to redirect to pages with different informat
 
 ## 🖼️ Screenshots
 
-![Screenshot 1](screenshot1.png)
-![Screenshot 2](screenshot2.png)
+![image](https://github.com/CRPhillips27/Personalized-League-of-Legends-Stats-Tracker/assets/95902034/8f36955d-e6dc-4c12-80ed-da0e22fe2811)
+(![image](https://github.com/CRPhillips27/Personalized-League-of-Legends-Stats-Tracker/assets/95902034/e9da3240-20d0-4dfc-ae32-67fd74fa3d1f)
+
 
 
 ## 🙏 Acknowledgements
 
-Any acknowledgments or credits for resources, libraries, or other contributions used in your project.
+I would like to thank Riot Games for approving my permanent API key request for this application and for providing the necessary endpoints for me to utilize
+the data that I wanted to include. 
