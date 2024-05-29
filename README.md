@@ -2,7 +2,7 @@
 
 ## 🚀 Overview
 
-This project is an ongoing development of an application that utilizes Riot API endpoints to gather and organize statistics for a single user. For this, I acquired a permanent API key to access all the information I need from Riot Games and created functions to process such information in a way that my single user desired through a continuous development and feedback loop. 
+This project is an ongoing development of an application that utilizes Riot API endpoints to gather and organize statistics for a single user. For this, I acquired a permanent API key to access all the information I need from Riot Games and created functions to process such information in a way that my single user desired through a continuous development and feedback loop. With respect to the rules of software development, I respected all wishes of my test user to keep the UI as simple and plain as possible, focusing primarily on the extracted API endpoint data to be output.
 
 ## ✨ Features
 
